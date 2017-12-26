@@ -1,0 +1,15 @@
+$gray : #666;
+
+// colors
+
+$mainHL : #EC1C24;
+$dark-gray : #191919;
+$white : #ffffff;
+
+
+//mixings
+
+@mixin container{
+    max-width: 1144px;
+    margin: 0 auto;
+}
