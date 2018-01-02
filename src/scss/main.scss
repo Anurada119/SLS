@@ -14,13 +14,21 @@ a{
     display: block;
 }
 
+.head-wrap{
+    width: 100%;
+    background: $white;
+    position: fixed;
+    z-index: 99999999;
+}
+
 .header{
     display: flex;
     height: 70px;
     justify-content: space-between;
-    width: 100%;
     @include container;
+    width: 100%;
     align-items: center;
+    background: $white;
 
     .logo{
         padding: 1rem;
@@ -37,6 +45,12 @@ a{
                 padding: 0 1rem;
                 font-family: 'ceragr-light';
                 color: $dark-gray;
+                a{
+                    &:active,
+                    &:visited{
+                        color: $dark-gray;
+                    }
+                }
                 
                 a{
                     transition: all 0.3s ease-in-out;
@@ -51,14 +65,15 @@ a{
 
 .sls-slider{
     width: 100%;
-    height: 400px;
+    height: 100vh;
     background: $dark-gray;
     position: relative;
     .js-slides{
-        height: 400px;
+        height: 100vh;
         .slick-dots{
             bottom: 0;
             background: transparent;
+            padding-bottom: 2rem;
             li{
                 button{
                     &:before{
@@ -79,7 +94,7 @@ a{
 
         .sls-slide-content{
             width: 100%;
-            height: 400px;
+            height: 100vh;
             box-sizing: border-box;
             display: flex;
             justify-content: flex-start;
@@ -597,6 +612,7 @@ a{
                     margin: 0 0 1rem 50px;
                     list-style: none;
                     position: relative;
+                    font-size: 10px;
                     &.address{
                         &:before{
                             content: '';
@@ -677,6 +693,15 @@ a{
             }
         }
     }
+
+    .sls-slider .js-slides .sls-slide-content .slide-inner h2{
+        font-size: 28px;
+    }
+
+    .sls-slider .js-slides .sls-slide-content .slide-inner{
+        padding-left: 0rem;
+    }
+    
     
 }
 
